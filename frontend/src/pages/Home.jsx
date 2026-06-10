@@ -14,7 +14,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/events");
+        const res = await axios.get("/api/events");
         if (res.data.success) {
           // Take top 3 upcoming events
           setEvents(res.data.data.slice(0, 3));

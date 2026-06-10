@@ -145,7 +145,7 @@ export const Register = () => {
           paymentStatus: "Completed"
         };
 
-        const res = await axios.post("http://localhost:5000/api/registrations", payload);
+        const res = await axios.post("/api/registrations", payload);
         
         if (res.data.success) {
           setRegisteredUser(res.data.data);

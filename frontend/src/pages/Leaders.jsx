@@ -10,7 +10,7 @@ export const Leaders = () => {
   useEffect(() => {
     const fetchLeaders = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/leaders");
+        const res = await axios.get("/api/leaders");
         if (res.data.success) {
           setLeaders(res.data.data);
         }

@@ -28,7 +28,7 @@ import {
 
 import { toaster } from "../../components/ui/toaster";
 
-const API = "http://localhost:5000/api/events";
+const API = "/api/events";
 
 const AdminEvents = () => {
   const [events, setEvents] = useState([]);

@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Ensures the production asset links map correctly to root
   server: {
     proxy: {
       "/api": {
@@ -11,8 +12,8 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
-  },
-    build: {
+  }, // <--- THIS COMMA WAS MISSING!
+  build: {
     rolldownOptions: {
       output: {
         manualChunks(id) {

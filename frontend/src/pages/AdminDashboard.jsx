@@ -36,7 +36,7 @@ export const AdminDashboard = () => {
             Admin Dashboard
           </Heading>
           <Text color="gray.400" fontSize="lg">
-            Welcome to the parish admin portal. Use the navigation links to manage events, leaders,
+            Welcome to the Diocesan portal. Use the navigation links to manage events, leaders,
             and registrations.
           </Text>
           <Stack direction={{ base: "column", md: "row" }} justify="center" gap={4}>

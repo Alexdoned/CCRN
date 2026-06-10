@@ -27,7 +27,7 @@ import {
 
 import { toaster } from "../../components/ui/toaster";
 
-const API = "http://localhost:5000/api/leaders";
+const API = "/api/leaders";
 
 const AdminLeaders = () => {
   const [leaders, setLeaders] = useState([]);
