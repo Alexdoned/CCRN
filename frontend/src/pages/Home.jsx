@@ -278,7 +278,7 @@ export const Home = () => {
                 </Button>
               </Flex>
 
-              <Stack spacing={1} color="gray.300" fontSize="sm" mt={2}>
+              <Stack gap={1} color="gray.300" fontSize="sm" mt={2}>
                 {parishes.slice(0, 8).map((parish) => (
                   <Text
                     as="button"

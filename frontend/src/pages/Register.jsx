@@ -19,6 +19,16 @@ import { denaryParishData } from "../data/denaryParishData.js";
 
 export const Register = () => {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    denary: "",
+    parish: "",
+    cardNumber: "",
+    cardExpiry: "",
+    cardCvc: ""
+  });
+
   useEffect(() => {
     // Preselect denary if provided via query param (from Home card select)
     try {
@@ -45,15 +55,7 @@ export const Register = () => {
       // ignore
     }
   }, []);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    denary: "",
-    parish: "",
-    cardNumber: "",
-    cardExpiry: "",
-    cardCvc: ""
-  });
+  
   
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [errors, setErrors] = useState({});

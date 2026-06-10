@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken";
 
+const JWT_SECRET = process.env.JWT_SECRET || "Lanwebanu@#34";
+
 export const protectAdmin = (req, res, next) => {
     try {
         let token;
@@ -9,7 +11,7 @@ export const protectAdmin = (req, res, next) => {
         if (!token) {
             return res.status(401).json({ success: false, message: "Not authorized, token missing" });
         }
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || "super_secret_jwt_key_here");
+        const decoded = jwt.verify(token, JWT_SECRET);
         req.admin = decoded;
         next();
     } catch (err) {

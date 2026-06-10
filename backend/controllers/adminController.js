@@ -1,6 +1,8 @@
 import { Admin } from "../models/Admin.js";
 import jwt from "jsonwebtoken";
 
+const JWT_SECRET = process.env.JWT_SECRET || "Lanwebanu@#34";
+
 export const loginAdmin = async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -17,7 +19,7 @@ export const loginAdmin = async (req, res) => {
         }
         const token = jwt.sign(
             { id: admin._id, username: admin.username },
-            process.env.JWT_SECRET || "Lanwebanu@#34",
+            JWT_SECRET,
             { expiresIn: "1d" }
         );
         res.status(200).json({ success: true, token, admin: { id: admin._id, username: admin.username } });

@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Container, Heading, Text, Stack, Button } from "@chakra-ui/react";
 import { toaster } from "../components/ui/toaster";
@@ -31,7 +31,7 @@ export const AdminDashboard = () => {
   return (
     <Box bg="rgb(10, 15, 30)" color="white" minH="calc(100vh - 64px)" py={16}>
       <Container maxW="4xl">
-        <Stack spacing={8} textAlign="center">
+        <Stack gap={8} textAlign="center">
           <Heading as="h1" size="2xl" fontWeight="bold">
             Admin Dashboard
           </Heading>
@@ -39,10 +39,12 @@ export const AdminDashboard = () => {
             Welcome to the parish admin portal. Use the navigation links to manage events, leaders,
             and registrations.
           </Text>
-          <Stack direction={{ base: "column", md: "row" }} justify="center" spacing={4}>
+          <Stack direction={{ base: "column", md: "row" }} justify="center" gap={4}>
             <Button
               size="lg"
-              bgGradient="linear(to-r, purple.500, indigo.600)"
+              bgGradient="to-r"
+              gradientFrom="purple.500"
+              gradientTo="indigo.600"
               color="white"
               _hover={{ opacity: 0.9 }}
               onClick={() => navigate('/admin/events')}
@@ -51,7 +53,9 @@ export const AdminDashboard = () => {
             </Button>
             <Button
               size="lg"
-              bgGradient="linear(to-r, teal.500, cyan.600)"
+              bgGradient="to-r"
+              gradientFrom="teal.500"
+              gradientTo="cyan.600"
               color="white"
               _hover={{ opacity: 0.9 }}
               onClick={() => navigate('/admin/leaders')}
@@ -60,9 +64,9 @@ export const AdminDashboard = () => {
             </Button>
             <Button
               size="lg"
-              bgGradient="linear(to-r, purple.500, indigo.600)"
+              bg="red.600"
               color="white"
-              _hover={{ opacity: 0.9 }}
+              _hover={{ bg: "red.700" }}
               onClick={handleLogout}
             >
               Logout
