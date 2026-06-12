@@ -1,7 +1,7 @@
 import { Admin } from "../models/Admin.js";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "Lanwebanu@#34";
+const JWT_SECRET = process.env.JWT_SECRET || "=super_secret_jwt_key_here";
 
 export const loginAdmin = async (req, res) => {
     const { username, password } = req.body;
