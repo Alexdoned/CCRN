@@ -327,7 +327,7 @@ export const Register = () => {
                     outline: "none"
                   }}
                 >
-                  <option value="">-- Select Denary --</option>
+                  <option value="">Select Denary</option>
                   {Object.keys(denaryParishData).map((denary) => (
                     <option key={denary} value={denary}>{denary}</option>
                   ))}
@@ -351,7 +351,7 @@ export const Register = () => {
                     outline: "none"
                   }}
                 >
-                  <option value="">-- Select Parish --</option>
+                  <option value=""> Select Parish </option>
                   {formData.denary && denaryParishData[formData.denary].map((parish) => (
                     <option key={parish} value={parish}>{parish}</option>
                   ))}

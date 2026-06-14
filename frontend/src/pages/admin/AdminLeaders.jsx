@@ -100,8 +100,9 @@ const AdminLeaders = () => {
   };
 
   const handleSubmit = async () => {
+    
     try {
-      if (!form.name || !form.role || !form.imageUrl) {
+      if (!form.name || !form.position || !form.imageUrl) {
         toaster.create({
           title: "Validation Error",
           description: "Please fill all fields.",
