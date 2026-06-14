@@ -1,4 +1,7 @@
 import { Leader } from "../models/Leader.js";
+// In both protectAdmin and loginAdmin files:
+import { JWT_SECRET } from "../config/config.js"; 
+
 
 // Read all
 export const getLeaders = async (req, res) => {

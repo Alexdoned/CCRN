@@ -1,4 +1,6 @@
 import { Event } from "../models/Event.js";
+// In both protectAdmin and loginAdmin files:
+import { JWT_SECRET } from "../config/config.js"; 
 
 // Read all
 export const getEvents = async (req, res) => {

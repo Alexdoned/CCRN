@@ -1,5 +1,7 @@
 import { Registration } from "../models/Registration.js";
 
+import { JWT_SECRET } from "../config/config.js"; 
+
 // Read all (protected)
 export const getRegistrations = async (req, res) => {
     try {

@@ -1,7 +1,9 @@
 import { Admin } from "../models/Admin.js";
 import jwt from "jsonwebtoken";
+// In both protectAdmin and loginAdmin files:
+import { JWT_SECRET } from "../config/config.js"; 
 
-const JWT_SECRET = process.env.JWT_SECRET || "=super_secret_jwt_key_here";
+
 
 export const loginAdmin = async (req, res) => {
     const { username, password } = req.body;

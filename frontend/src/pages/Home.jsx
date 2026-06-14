@@ -54,7 +54,7 @@ export const Home = () => {
               textTransform="uppercase"
               letterSpacing="wider"
             >
-              Welcome to the Jalingo Diocesan Community Hub
+              Welcome to the Catholic Charasmtic Renewal Of Jalingo Diocesan Community Hub
             </Badge>
             <Heading
               as="h1"
