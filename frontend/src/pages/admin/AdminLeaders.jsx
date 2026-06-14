@@ -92,7 +92,7 @@ const AdminLeaders = () => {
 
     setForm({
       name: leader.name || "",
-      role: leader.role || "",
+      position: leader.position || "",
       imageUrl: leader.imageUrl || "",
     });
 
