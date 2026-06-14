@@ -44,7 +44,7 @@ export const Home = () => {
             <Badge
               alignSelf="flex-start"
               bg="rgba(6, 182, 212, 0.15)"
-              color="cyan.400"
+              color="cyan.600"
               fontSize="xs"
               fontWeight="bold"
               px={3}
